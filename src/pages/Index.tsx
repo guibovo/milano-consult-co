@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, Phone, MapPin, Menu, X } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import florImage from '@/assets/florencia-milano.jpeg';
 
@@ -86,10 +87,13 @@ const Index = () => {
     }
   ];
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false); // Close mobile menu after navigation
     }
   };
 
@@ -100,6 +104,8 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold text-foreground">Milano & Co.</h2>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex gap-8">
               <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors">
                 Acerca de mí
@@ -111,7 +117,42 @@ const Index = () => {
                 Contacto
               </button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-foreground hover:text-primary transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
+
+          {/* Mobile Navigation */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 animate-fade-in">
+              <div className="flex flex-col gap-4">
+                <button 
+                  onClick={() => scrollToSection('about')} 
+                  className="text-foreground hover:text-primary transition-colors text-left py-2"
+                >
+                  Acerca de mí
+                </button>
+                <button 
+                  onClick={() => scrollToSection('services')} 
+                  className="text-foreground hover:text-primary transition-colors text-left py-2"
+                >
+                  Servicios
+                </button>
+                <button 
+                  onClick={() => scrollToSection('contact')} 
+                  className="text-foreground hover:text-primary transition-colors text-left py-2"
+                >
+                  Contacto
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
