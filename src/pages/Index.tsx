@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Menu, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Menu, X, Instagram } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import florImage from '@/assets/florencia-milano.jpeg';
 
@@ -103,7 +103,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-foreground">Milano & Co.</h2>
+            <h2 className="text-2xl font-bold text-foreground font-caveat">Milano & Co.</h2>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex gap-8">
@@ -159,10 +159,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground font-caveat">
             Milano & Co.
           </h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-8">
+          <p className="text-2xl md:text-3xl text-muted-foreground mb-8 font-roboto">
             Potenciando personas, transformando empresas.
           </p>
         </div>
@@ -257,6 +257,15 @@ const Index = () => {
               <MapPin className="w-6 h-6" />
               <span>Rosario, Santa Fe, Argentina</span>
             </div>
+            <a 
+              href="https://www.instagram.com/milano.yco" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
+            >
+              <Instagram className="w-6 h-6" />
+              <span>@milano.yco</span>
+            </a>
           </div>
         </div>
       </section>
