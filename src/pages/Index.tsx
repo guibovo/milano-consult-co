@@ -258,7 +258,7 @@ const Index = () => {
               <span>Rosario, Santa Fe, Argentina</span>
             </div>
             <a 
-              href="https://www.instagram.com/milano.yco" 
+              href="https://www.instagram.com/milano__co?igsh=MWM4d25ybGhwYXB5ZQ%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
