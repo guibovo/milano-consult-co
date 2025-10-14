@@ -100,20 +100,20 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 bg-navbar backdrop-blur-md z-50 border-b border-navbar">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-foreground font-caveat">Milano & Co.</h2>
+            <h2 className="text-2xl font-bold text-navbar-foreground font-caveat">Milano & Co.</h2>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex gap-8">
-              <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors">
+              <button onClick={() => scrollToSection('about')} className="text-navbar-foreground hover:text-primary transition-colors">
                 Acerca de mí
               </button>
-              <button onClick={() => scrollToSection('services')} className="text-foreground hover:text-primary transition-colors">
+              <button onClick={() => scrollToSection('services')} className="text-navbar-foreground hover:text-primary transition-colors">
                 Servicios
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors">
+              <button onClick={() => scrollToSection('contact')} className="text-navbar-foreground hover:text-primary transition-colors">
                 Contacto
               </button>
             </div>
@@ -121,7 +121,7 @@ const Index = () => {
             {/* Mobile Menu Button */}
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-foreground hover:text-primary transition-colors"
+              className="md:hidden text-navbar-foreground hover:text-primary transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -134,19 +134,19 @@ const Index = () => {
               <div className="flex flex-col gap-4">
                 <button 
                   onClick={() => scrollToSection('about')} 
-                  className="text-foreground hover:text-primary transition-colors text-left py-2"
+                  className="text-navbar-foreground hover:text-primary transition-colors text-left py-2"
                 >
                   Acerca de mí
                 </button>
                 <button 
                   onClick={() => scrollToSection('services')} 
-                  className="text-foreground hover:text-primary transition-colors text-left py-2"
+                  className="text-navbar-foreground hover:text-primary transition-colors text-left py-2"
                 >
                   Servicios
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')} 
-                  className="text-foreground hover:text-primary transition-colors text-left py-2"
+                  className="text-navbar-foreground hover:text-primary transition-colors text-left py-2"
                 >
                   Contacto
                 </button>
