@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Menu, X, Instagram } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
-import florImage from '@/assets/florencia-milano.jpeg';
+import florImage from '@/assets/florencia-profile.jpeg';
 
 const Index = () => {
   const services = [
