@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Menu, X, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Menu, X, Instagram, Linkedin } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import florImage from '@/assets/florencia-profile.jpeg';
 
@@ -258,13 +258,22 @@ const Index = () => {
               <span>Rosario, Santa Fe, Argentina</span>
             </div>
             <a 
-              href="https://www.instagram.com/milano__co?igsh=MWM4d25ybGhwYXB5ZQ%3D%3D"
+              href="https://www.instagram.com/milano__co/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
             >
               <Instagram className="w-6 h-6" />
-              <span>@milano.yco</span>
+              <span>@milano__co</span>
+            </a>
+            <a 
+              href="https://linkedin.com/company/milano-company/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
+            >
+              <Linkedin className="w-6 h-6" />
+              <span>Milano Company</span>
             </a>
           </div>
         </div>
