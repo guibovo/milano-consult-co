@@ -2,6 +2,12 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, Menu, X, Instagram, Linkedin } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import florImage from '@/assets/florencia-profile.jpeg';
+import autopico from '@/assets/autopico.jpg';
+import centibox from '@/assets/centibox.jpg';
+import watchman from '@/assets/watchman.jpg';
+import magiplast from '@/assets/magiplast.jpg';
+import centinela from '@/assets/centinela.jpg';
+import sisep from '@/assets/sisep.png';
 
 const Index = () => {
   const services = [
@@ -218,15 +224,25 @@ const Index = () => {
       <section className="py-20 px-6 bg-secondary">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">Clientes</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            {[1, 2, 3, 4].map((i) => (
-              <div 
-                key={i} 
-                className="w-32 h-32 bg-background rounded-lg flex items-center justify-center shadow-md hover:shadow-lg transition-shadow"
-              >
-                <span className="text-muted-foreground text-sm">Cliente {i}</span>
-              </div>
-            ))}
+          <div className="grid grid-cols-3 gap-8 md:gap-12 items-center justify-items-center max-w-4xl mx-auto">
+            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+              <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+              <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+              <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+              <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+              <img src={centinela} alt="El Centinela" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+              <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
+            </div>
           </div>
         </div>
       </section>
