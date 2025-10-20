@@ -36,8 +36,8 @@ All colors MUST be HSL.
     --input: 160 30% 85%;
     --ring: 160 40% 45%;
 
-    --navbar: 194 98% 18%;
-    --navbar-foreground: 0 0% 100%;
+    --navbar: 0 0% 100%;
+    --navbar-foreground: 0 0% 20%;
 
     --radius: 1rem;
 
@@ -86,8 +86,8 @@ All colors MUST be HSL.
     --border: 160 20% 25%;
     --input: 160 20% 25%;
     --ring: 160 40% 60%;
-    --navbar: 194 98% 18%;
-    --navbar-foreground: 0 0% 100%;
+    --navbar: 0 0% 100%;
+    --navbar-foreground: 0 0% 20%;
     --sidebar-background: 160 20% 10%;
     --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 160 40% 60%;

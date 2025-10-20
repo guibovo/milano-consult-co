@@ -100,7 +100,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-navbar backdrop-blur-md z-50 border-b border-navbar">
+      <nav className="fixed top-0 left-0 right-0 bg-navbar backdrop-blur-md z-50 border-b border-border shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold text-navbar-foreground font-caveat">Milano & Co.</h2>
