@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Menu, X, Instagram, Linkedin } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import florImage from '@/assets/florencia-profile.jpeg';
 import autopico from '@/assets/autopico.jpg';
 import centibox from '@/assets/centibox.jpg';
@@ -94,6 +95,7 @@ const Index = () => {
   ];
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -109,7 +111,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 bg-navbar backdrop-blur-md z-50 border-b border-border shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-navbar-foreground font-caveat">Milano & Co.</h2>
+            <h2 className="text-2xl font-bold text-[hsl(var(--petroleo))] font-caveat">Milano & Co.</h2>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex gap-8">
@@ -165,7 +167,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground font-caveat">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[hsl(var(--petroleo))] font-caveat">
             Milano & Co.
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground mb-8 font-roboto">
@@ -186,7 +188,7 @@ const Index = () => {
               />
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-foreground">Acerca de mí</h2>
+              <h2 className="text-4xl font-bold mb-6 text-[hsl(var(--petroleo))] font-caveat">Acerca de mí</h2>
               <div className="space-y-4 text-lg text-foreground leading-relaxed">
                 <p>
                   Soy Flor Milano, Licenciada en Relaciones Laborales, Auditora ISO 9001 y Counselor Organizacional, Laboral y Migratorio.
@@ -206,7 +208,7 @@ const Index = () => {
       {/* Services Section */}
       <section id="services" className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12 text-center text-foreground">Servicios</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-[hsl(var(--petroleo))] font-caveat">Servicios</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <ServiceCard 
@@ -214,6 +216,8 @@ const Index = () => {
                 title={service.title}
                 description={service.description}
                 details={service.details}
+                isExpanded={expandedCard === index}
+                onToggle={() => setExpandedCard(expandedCard === index ? null : index)}
               />
             ))}
           </div>
@@ -223,26 +227,68 @@ const Index = () => {
       {/* Clients Section */}
       <section className="py-20 px-6 bg-secondary">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12 text-center text-foreground">Clientes</h2>
-          <div className="grid grid-cols-3 gap-8 md:gap-12 items-center justify-items-center max-w-4xl mx-auto">
-            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+          <h2 className="text-4xl font-bold mb-12 text-center text-[hsl(var(--petroleo))] font-caveat">Clientes</h2>
+          
+          {/* Desktop View */}
+          <div className="hidden md:grid grid-cols-3 gap-8 md:gap-12 items-center justify-items-center max-w-4xl mx-auto">
+            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
               <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
               <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
               <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
               <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
               <img src={centinela} alt="El Centinela" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-background rounded-lg flex items-center justify-center p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
               <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
             </div>
+          </div>
+
+          {/* Mobile Carousel */}
+          <div className="md:hidden">
+            <Carousel className="w-full max-w-sm mx-auto">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md border border-border">
+                    <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md border border-border">
+                    <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md border border-border">
+                    <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md border border-border">
+                    <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md border border-border">
+                    <img src={centinela} alt="El Centinela" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md border border-border">
+                    <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
@@ -250,7 +296,7 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6 text-foreground">Contacto</h2>
+          <h2 className="text-4xl font-bold mb-6 text-[hsl(var(--petroleo))] font-caveat">Contacto</h2>
           <p className="text-2xl mb-12 text-foreground">
             ¿Querés transformar tu empresa? Estoy lista para acompañarte.
           </p>

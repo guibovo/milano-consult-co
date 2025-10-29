@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         'caveat': ['Caveat', 'cursive'],
+        'montserrat': ['Montserrat', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],
       },
       colors: {
