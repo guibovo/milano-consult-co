@@ -208,16 +208,17 @@ const Index = () => {
       <section id="services" className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold mb-12 text-center text-[hsl(var(--petroleo))] font-caveat">Servicios</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
             {services.map((service, index) => (
-              <ServiceCard 
-                key={index}
-                title={service.title}
-                description={service.description}
-                details={service.details}
-                isExpanded={expandedCard === index}
-                onToggle={() => setExpandedCard(expandedCard === index ? null : index)}
-              />
+              <div key={index} className="break-inside-avoid mb-6">
+                <ServiceCard 
+                  title={service.title}
+                  description={service.description}
+                  details={service.details}
+                  isExpanded={expandedCard === index}
+                  onToggle={() => setExpandedCard(expandedCard === index ? null : index)}
+                />
+              </div>
             ))}
           </div>
         </div>
