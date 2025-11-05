@@ -229,45 +229,45 @@ const Index = () => {
           <h2 className="text-4xl font-bold mb-12 text-center text-[hsl(var(--petroleo))] font-caveat">Clientes</h2>
           
           {/* Desktop View */}
-          <div className="hidden md:grid grid-cols-3 gap-8 md:gap-12 items-center justify-items-center max-w-4xl mx-auto">
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
+          <div className="hidden md:grid grid-cols-3 gap-8 md:gap-12 items-center justify-items-center max-w-5xl mx-auto">
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-10 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-gray-200">
+              <img src={autopico} alt="Autopico" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-10 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-gray-200">
+              <img src={centibox} alt="Centibox" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain" />
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-10 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-gray-200">
+              <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain" />
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-10 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-gray-200">
+              <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <img src={centinela} alt="El Centinela" className="w-full h-full object-contain" />
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-10 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-gray-200">
+              <img src={centinela} alt="El Centinela" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-10 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-gray-200">
+              <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all" />
             </div>
           </div>
 
           {/* Mobile View - Grid with 2 columns */}
-          <div className="md:hidden grid grid-cols-2 gap-4 max-w-md mx-auto">
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-6 shadow-md border border-border">
+          <div className="md:hidden grid grid-cols-2 gap-6 max-w-lg mx-auto">
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-6 shadow-lg border border-gray-200">
               <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-6 shadow-md border border-border">
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-6 shadow-lg border border-gray-200">
               <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-6 shadow-md border border-border">
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-6 shadow-lg border border-gray-200">
               <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-6 shadow-md border border-border">
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-6 shadow-lg border border-gray-200">
               <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-6 shadow-md border border-border">
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-6 shadow-lg border border-gray-200">
               <img src={centinela} alt="El Centinela" className="w-full h-full object-contain" />
             </div>
-            <div className="w-full aspect-video bg-card rounded-lg flex items-center justify-center p-6 shadow-md border border-border">
+            <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center p-6 shadow-lg border border-gray-200">
               <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
             </div>
           </div>
