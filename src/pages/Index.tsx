@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Menu, X, Instagram, Linkedin } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -96,6 +96,24 @@ const Index = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [carouselApi, setCarouselApi] = useState<any>();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Update current slide when carousel changes
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    const updateSlide = () => {
+      setCurrentSlide(carouselApi.selectedScrollSnap());
+    };
+
+    carouselApi.on('select', updateSlide);
+    updateSlide();
+
+    return () => {
+      carouselApi.off('select', updateSlide);
+    };
+  }, [carouselApi]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -252,14 +270,13 @@ const Index = () => {
           </div>
 
           {/* Mobile View - Carousel */}
-          <div className="md:hidden max-w-sm mx-auto">
-            <Carousel className="w-full">
+          <div className="md:hidden max-w-sm mx-auto space-y-6">
+            <Carousel 
+              className="w-full"
+              opts={{ loop: true }}
+              setApi={setCarouselApi}
+            >
               <CarouselContent>
-                <CarouselItem>
-                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
-                    <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
-                  </div>
-                </CarouselItem>
                 <CarouselItem>
                   <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
                     <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
@@ -285,10 +302,31 @@ const Index = () => {
                     <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
                   </div>
                 </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                    <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="left-2" />
+              <CarouselNext className="right-2" />
             </Carousel>
+            
+            {/* Dot indicators */}
+            <div className="flex justify-center gap-2">
+              {[0, 1, 2, 3, 4, 5].map((index) => (
+                <button
+                  key={index}
+                  onClick={() => carouselApi?.scrollTo(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    currentSlide === index 
+                      ? 'bg-primary w-6' 
+                      : 'bg-muted-foreground/30'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
