@@ -278,32 +278,32 @@ const Index = () => {
             >
               <CarouselContent>
                 <CarouselItem>
-                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 border border-gray-200">
                     <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 border border-gray-200">
                     <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain" />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 border border-gray-200">
                     <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain" />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 border border-gray-200">
                     <img src={centinela} alt="El Centinela" className="w-full h-full object-contain" />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 border border-gray-200">
                     <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 border border-gray-200">
                     <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
                   </div>
                 </CarouselItem>
