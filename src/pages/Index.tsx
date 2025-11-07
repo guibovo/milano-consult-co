@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Menu, X, Instagram, Linkedin } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import florImage from '@/assets/florencia-profile.jpeg';
 import autopico from '@/assets/autopico.jpg';
 import centibox from '@/assets/centibox.jpg';
@@ -250,26 +251,44 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mobile View - Grid with 2 columns */}
-          <div className="md:hidden grid grid-cols-2 gap-8 mx-auto">
-            <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
-              <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
-            </div>
-            <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
-              <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
-            </div>
-            <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
-              <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain" />
-            </div>
-            <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
-              <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain" />
-            </div>
-            <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
-              <img src={centinela} alt="El Centinela" className="w-full h-full object-contain" />
-            </div>
-            <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
-              <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
-            </div>
+          {/* Mobile View - Carousel */}
+          <div className="md:hidden max-w-sm mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                    <img src={autopico} alt="Autopico" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                    <img src={centibox} alt="Centibox" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                    <img src={watchman} alt="Watchman Region Centro" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                    <img src={magiplast} alt="Magiplast" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                    <img src={centinela} alt="El Centinela" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-8 shadow-lg border border-gray-200">
+                    <img src={sisep} alt="SISEP Argentina" className="w-full h-full object-contain" />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
