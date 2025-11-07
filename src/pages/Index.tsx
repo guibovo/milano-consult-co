@@ -270,7 +270,7 @@ const Index = () => {
           </div>
 
           {/* Mobile View - Carousel */}
-          <div className="md:hidden max-w-sm mx-auto space-y-6">
+          <div className="md:hidden max-w-sm mx-auto space-y-6 px-12">
             <Carousel 
               className="w-full"
               opts={{ loop: true }}
@@ -308,8 +308,8 @@ const Index = () => {
                   </div>
                 </CarouselItem>
               </CarouselContent>
-              <CarouselPrevious className="left-2" />
-              <CarouselNext className="right-2" />
+              <CarouselPrevious className="-left-12" />
+              <CarouselNext className="-right-12" />
             </Carousel>
             
             {/* Dot indicators */}
