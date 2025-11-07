@@ -340,11 +340,18 @@ const Index = () => {
           </p>
           <div className="space-y-6 max-w-md mx-auto">
             <a 
-              href="mailto:mariafmilano@gmail.com" 
+              href="mailto:info@milanoandco.com.ar" 
               className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-6 h-6" />
-              <span>mariafmilano@gmail.com</span>
+              <span>info@milanoandco.com.ar</span>
+            </a>
+            <a 
+              href="mailto:internacionales@milanoandco.com.ar" 
+              className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
+            >
+              <Mail className="w-6 h-6" />
+              <span>internacionales@milanoandco.com.ar</span>
             </a>
             <a 
               href="tel:+5493415788259" 
