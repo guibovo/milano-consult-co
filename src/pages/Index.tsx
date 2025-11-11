@@ -339,20 +339,20 @@ const Index = () => {
             ¿Querés transformar tu empresa? Estoy lista para acompañarte.
           </p>
           <div className="space-y-6 max-w-md mx-auto">
-            {/* <a 
+            <a 
               href="mailto:info@milanoandco.com.ar" 
               className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-6 h-6" />
               <span>info@milanoandco.com.ar</span>
-            </a> */}
-            <a 
+            </a>
+            {/* <a 
               href="mailto:internacionales@milanoandco.com.ar"
               className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-6 h-6" />
               <span>internacionales@milanoandco.com.ar</span>
-            </a>
+            </a> */}
             <a 
               href="tel:+5493415788259" 
               className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
