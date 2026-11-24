@@ -354,11 +354,11 @@ const Index = () => {
               <span>internacionales@milanoandco.com.ar</span>
             </a> */}
             <a 
-              href="tel:+5493415788259" 
+              href="tel:+5493415783259" 
               className="flex items-center justify-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-6 h-6" />
-              <span>+54 9 341 578 8259</span>
+              <span>+54 9 341 578 3259</span>
             </a>
             <div className="flex items-center justify-center gap-3 text-lg text-foreground">
               <MapPin className="w-6 h-6" />
